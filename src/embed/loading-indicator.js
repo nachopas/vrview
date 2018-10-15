@@ -17,7 +17,7 @@
  * Shows a 2D loading indicator while various pieces of EmbedVR load.
  */
 function LoadingIndicator() {
-  this.el = document.querySelector('.loading-indicator');
+  this.el = document.querySelector('#loading-indicator');
   this.show();
 }
 
