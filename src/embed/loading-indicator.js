@@ -17,31 +17,9 @@
  * Shows a 2D loading indicator while various pieces of EmbedVR load.
  */
 function LoadingIndicator() {
-  this.el = this.build_();
-  document.body.appendChild(this.el);
+  this.el = document.querySelector('.loading-indicator');
   this.show();
 }
-
-LoadingIndicator.prototype.build_ = function() {
-  var overlay = document.createElement('div');
-  var s = overlay.style;
-  s.position = 'fixed';
-  s.top = 0;
-  s.left = 0;
-  s.width = '100%';
-  s.height = '100%';
-  s.background = '#eee';
-  var img = document.createElement('img');
-  img.src = 'images/loading.gif';
-  var s = img.style;
-  s.position = 'absolute';
-  s.top = '50%';
-  s.left = '50%';
-  s.transform = 'translate(-50%, -50%)';
-
-  overlay.appendChild(img);
-  return overlay;
-};
 
 LoadingIndicator.prototype.hide = function() {
   this.el.style.display = 'none';
